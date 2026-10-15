@@ -1,0 +1,37 @@
+---
+const { title = "pr-reviewer-action", description = "AI pull request reviews with any OpenAI- or Anthropic-compatible model — cloud or self-hosted.", active = "" } = Astro.props;
+import "../styles/global.css";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="nav">
+      <a class="wordmark" href="/">pr-reviewer-action<span class="dot">.</span></a>
+      <nav>
+        <a href="#highlights">Highlights</a>
+        <a href="#quick-start">Quick start</a>
+        <a href="https://github.com/misospace/pr-reviewer-action">GitHub ↗</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site">
+      <div class="family">
+        <a href="https://misospace.org">misospace.org</a>
+        <a href="https://github.com/misospace/courier">courier</a>
+        <a href="https://github.com/misospace/dispatch">dispatch</a>
+        <a href="https://github.com/misospace">all of misospace ↗</a>
+      </div>
+      <div>© 2026 misospace · every PR gets a real review</div>
+    </footer>
+  </body>
+</html>
